@@ -1,0 +1,11 @@
+.w3-card {
+
+    height:auto;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
