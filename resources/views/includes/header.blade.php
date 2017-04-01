@@ -29,7 +29,7 @@ header section -->
                                 <li><a class="menu" href={{ route('searchresult') }}>APPOINTMENT</a></li>
                                 <li><a class="menu" href="">about us</a></li>
                                 <li><a class="menu" href="">our services </a></li>
-                                <li><a class="menu" href=""> contact us</a></li>
+                                <li><a class="menu" href="" id="login"> login</a></li>
                             </ul>
                         </div><!-- /navbar-collapse -->
                     </div><!-- / .container-fluid -->
@@ -37,4 +37,36 @@ header section -->
             </div>
         </div>
     </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
+        <div class="row"><div class="module form-module " id="loginmodel">
+                <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+                    <div class="tooltip">Click Me</div>
+                </div>
+                <div class="form">
+                    <h2>Login to your account</h2>
+                    <form id="login-form" action="{{ route('signin') }}" method="post" role="form" style="display: block;" >
+                        <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Username" value=""/>
+                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password"/>
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                        <input type="hidden" name="_token" value="{{ Session::token() }}">
+                    </form>
+                </div>
+                <div class="form">
+                    <h2>Create an account</h2>
+                    <form>
+                        <input type="text" placeholder="Username"/>
+                        <input type="password" placeholder="Password"/>
+                        <input type="email" placeholder="Email Address"/>
+                        <input type="tel" placeholder="Phone Number"/>
+                        <button>Register</button>
+                    </form>
+                </div>
+                <div class="cta"><a href="http://andytran.me">Forgot your password?</a></div>
+            </div>
+        </div><!-- /.modal -->
+    </div>
+
 </header> <!-- end of header area -->
+
+
